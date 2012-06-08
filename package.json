@@ -1,0 +1,19 @@
+{
+  "name": "vector",
+  "url": "http://github.com/reu/vector.js",
+  "keywords": ["physics", "math", "vectors", "2D"],
+  "version": "0.0.1",
+  "main": "./lib/vector",
+  "author": "Rodrigo Navarro <rnavarro1@gmail.com>",
+  "scripts" : {
+    "test": "cake test"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "devDependencies": {
+    "coffee-script": "1.2.x",
+    "mocha": ">= 1.1.0",
+    "should": ">= 0.6.3"
+  }
+}
