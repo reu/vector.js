@@ -112,3 +112,15 @@ describe "Vector", ->
   describe "#dot()", ->
     it "returns the dot product of the two vectors", ->
       v1.dot(v2).should.equal 50
+
+  describe "#clone()", ->
+    beforeEach -> v3 = v1.clone()
+
+    it "returns a new object", ->
+      v3.should.not.equal v1
+
+    it "has the same x value", ->
+      v3.x.should.equal v1.x
+
+    it "has the same y value", ->
+      v3.y.should.equal v1.y

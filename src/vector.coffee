@@ -44,4 +44,7 @@ class Vector
   dot: (vector) ->
     @x * vector.x + @y * vector.y
 
+  clone: ->
+    new Vector @x, @y
+
 if window? then window.Vector = Vector else exports.Vector = Vector
