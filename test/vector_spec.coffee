@@ -1,7 +1,7 @@
 {Vector} = require("../src/vector")
 
 describe "Vector", ->
-  v1 = v2 = null
+  v1 = v2 = v3 = null
 
   beforeEach ->
     v1 = new Vector 5, 10
@@ -16,6 +16,15 @@ describe "Vector", ->
     it "adds y position to the vector", ->
       v1.y.should.equal 14
 
+  describe ".add()", ->
+    beforeEach -> v3 = Vector.add v1, v2
+
+    it "returns a new vector with the sum of x axis", ->
+      v3.x.should.equal 7
+
+    it "returns a new vector with the sum of y axis", ->
+      v3.y.should.equal 14
+
   describe "#sub()", ->
     beforeEach -> v1.sub(v2)
 
@@ -24,6 +33,15 @@ describe "Vector", ->
 
     it "adds y position to the vector", ->
       v1.y.should.equal 6
+
+  describe ".sub()", ->
+    beforeEach -> v3 = Vector.sub v1, v2
+
+    it "returns a new vector with the sub of x axis", ->
+      v3.x.should.equal 3
+
+    it "returns a new vector with the sub of y axis", ->
+      v3.y.should.equal 6
 
   describe "#mult()", ->
     beforeEach -> v1.mult(10)
@@ -34,6 +52,15 @@ describe "Vector", ->
     it "multiplies the y position", ->
       v1.y.should.equal 100
 
+  describe ".mult()", ->
+    beforeEach -> v3 = Vector.mult v1, 10
+
+    it "returns a new vector with the x axis multiplied", ->
+      v3.x.should.equal 50
+
+    it "returns a new vector with the y axis multiplied", ->
+      v3.y.should.equal 100
+
   describe "#div()", ->
     beforeEach -> v1.div(5)
 
@@ -42,6 +69,15 @@ describe "Vector", ->
 
     it "divides the y position", ->
       v1.y.should.equal 2
+
+  describe ".div()", ->
+    beforeEach -> v3 = Vector.div v1, 5
+
+    it "returns a new vector with the x axis divided", ->
+      v3.x.should.equal 1
+
+    it "returns a new vector with the y axis divided", ->
+      v3.y.should.equal 2
 
   describe "#mag()", ->
     it "returns the length of the vector", ->
