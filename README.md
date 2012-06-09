@@ -1,8 +1,7 @@
 # Vector.js
 When developing games or physics simulations you probably (and should) have already used vectors.
-Although math vectors are very simple to abstrac, lot's of languages have a native implementation of it. As this is not the case with Javascript, we always reproduce the same code over and over again in each project we need it. This library aims to extract all this logic to a common place and cover it with unit test.
 
-For now, vector.js only supports 2D vectors.
+Although math vectors are very simple to abstrac, lot's of languages have a native implementation of it. As this is not the case with Javascript, we always reproduce the same code over and over again in each project we need it. This library aims to extract all this logic to a common place and cover it with unit test.
 
 [![Build Status](https://secure.travis-ci.org/reu/vector.js.png)](http://travis-ci.org/reu/vector.js)
 

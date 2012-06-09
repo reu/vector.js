@@ -1,36 +1,44 @@
 class Vector
-  constructor: (@x, @y) ->
+  constructor: (@x, @y, @z = 0) ->
 
   add: (vector) ->
     @x += vector.x
     @y += vector.y
+    @z += vector.z
+    this
 
   @add: (v1, v2) ->
-    new Vector v1.x + v2.x, v1.y + v2.y
+    new Vector v1.x + v2.x, v1.y + v2.y, v1.z + v2.z
 
   sub: (vector) ->
     @x -= vector.x
     @y -= vector.y
+    @z -= vector.z
+    this
 
   @sub: (v1, v2) ->
-    new Vector v1.x - v2.x, v1.y - v2.y
+    new Vector v1.x - v2.x, v1.y - v2.y, v1.z - v2.z
 
   mult: (scalar) ->
     @x *= scalar
     @y *= scalar
+    @z *= scalar
+    this
 
   @mult: (vector, scalar) ->
-    new Vector vector.x * scalar, vector.y * scalar
+    new Vector vector.x * scalar, vector.y * scalar, vector.z * scalar
 
   div: (scalar) ->
     @x /= scalar
     @y /= scalar
+    @z /= scalar
+    this
 
   @div: (vector, scalar) ->
-    new Vector vector.x / scalar, vector.y / scalar
+    new Vector vector.x / scalar, vector.y / scalar, vector.z / scalar
 
   magSq: ->
-    @x * @x + @y * @y
+    @x * @x + @y * @y + @z * @z
 
   mag: ->
     Math.sqrt @magSq()
@@ -42,9 +50,9 @@ class Vector
     do @normalize and @mult(max) if @mag() > max
 
   dot: (vector) ->
-    @x * vector.x + @y * vector.y
+    @x * vector.x + @y * vector.y + @z * vector.z
 
   clone: ->
-    new Vector @x, @y
+    new Vector @x, @y, @z
 
 if window? then window.Vector = Vector else exports.Vector = Vector
