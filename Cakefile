@@ -12,4 +12,4 @@ task "watch", ->
   watch.stdout.on "data", (data) -> process.stdout.write data
 
 task "build", ->
-  exec "coffee -j lib/vector.js -c src/", printOut
+  exec "coffee -j lib/vector.js -c src/vector.coffee", printOut
