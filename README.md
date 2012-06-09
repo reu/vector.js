@@ -40,6 +40,5 @@ All the unit tests are also written in CoffeeScript. To run then, just type `cak
 
 # TODO
 
-* Support for 3D vectors
 * Documentation for each method
 * Pratical examples
