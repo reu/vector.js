@@ -368,3 +368,7 @@ describe "Vector", ->
 
     it "has the same z value", ->
       v2.z.should.equal v1.z
+
+  describe "#toString()", ->
+    it "should indicate its x, y and z positions", ->
+      new Vector(10, 20, 30).toString().should.equal "(10, 20, 30)"

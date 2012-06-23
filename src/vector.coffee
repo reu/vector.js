@@ -69,4 +69,7 @@ class Vector
   clone: ->
     new Vector @x, @y, @z
 
+  toString: ->
+    "(#{[@x, @y, @z].join(", ")})"
+
 if window? then window.Vector = Vector else exports.Vector = Vector
