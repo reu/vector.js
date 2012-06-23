@@ -52,6 +52,20 @@ class Vector
   dot: (vector) ->
     @x * vector.x + @y * vector.y + @z * vector.z
 
+  distance: (vector) ->
+    dx = @x - vector.x
+    dy = @y - vector.y
+    dz = @z - vector.z
+
+    Math.sqrt dx*dx + dy*dy + dz*dz
+
+  @distance: (v1, v2) ->
+    dx = v1.x - v2.x
+    dy = v1.y - v2.y
+    dz = v1.z - v2.z
+
+    Math.sqrt dx*dx + dy*dy + dz*dz
+
   clone: ->
     new Vector @x, @y, @z
 

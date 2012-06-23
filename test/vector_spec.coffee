@@ -1,7 +1,7 @@
 {Vector} = require("../src/vector")
 
 describe "Vector", ->
-  v1 = v2 = v3 = null
+  v1 = v2 = v3 = v4 = null
 
   describe "constructor", ->
     it "returns a new vector with z value of zero by default", ->
@@ -327,6 +327,30 @@ describe "Vector", ->
 
       it "returns the dot product of the two vectors", ->
         v1.dot(v2).should.equal 140
+
+  describe "#distance()", ->
+    beforeEach ->
+      v1 = new Vector 0, 0, 0
+      v2 = new Vector 10, 0, 0
+      v3 = new Vector 0, 10, 0
+      v4 = new Vector 0, 0, 10
+
+    it "returns the distance from the other vector", ->
+      v1.distance(v2).should.equal 10
+      v1.distance(v3).should.equal 10
+      v1.distance(v4).should.equal 10
+
+  describe ".distance()", ->
+    beforeEach ->
+      v1 = new Vector 0, 0, 0
+      v2 = new Vector 10, 0, 0
+      v3 = new Vector 0, 10, 0
+      v4 = new Vector 0, 0, 10
+
+    it "returns the distance between the two vectors", ->
+      Vector.distance(v1, v2).should.equal 10
+      Vector.distance(v1, v3).should.equal 10
+      Vector.distance(v1, v4).should.equal 10
 
   describe "#clone()", ->
     beforeEach ->
