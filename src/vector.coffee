@@ -1,5 +1,5 @@
 class Vector
-  constructor: (@x, @y, @z = 0) ->
+  constructor: (@x = 0, @y = 0, @z = 0) ->
 
   add: (vector) ->
     @x += vector.x

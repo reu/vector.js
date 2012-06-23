@@ -4,8 +4,10 @@ describe "Vector", ->
   v1 = v2 = v3 = v4 = null
 
   describe "constructor", ->
-    it "returns a new vector with z value of zero by default", ->
-      v1 = new Vector 1, 2
+    it "returns a new vector with all values of zero by default", ->
+      v1 = new Vector
+      v1.x.should.equal 0
+      v1.y.should.equal 0
       v1.z.should.equal 0
 
   describe "#add()", ->
