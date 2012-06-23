@@ -2,7 +2,7 @@
   "name": "vector",
   "url": "http://github.com/reu/vector.js",
   "keywords": ["physics", "math", "vectors", "2D"],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./lib/vector",
   "author": "Rodrigo Navarro <rnavarro1@gmail.com>",
   "scripts" : {
