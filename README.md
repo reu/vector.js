@@ -17,7 +17,7 @@ v1 = new Vector(10, 30);
 v2 = new Vector(30, 40);
 
 v1.add(v2);
-v1.mult(v2);
+v1.mult(5);
 v1.normalize();
 ```
 
