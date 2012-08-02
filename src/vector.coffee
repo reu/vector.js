@@ -66,6 +66,11 @@ class Vector
 
     Math.sqrt dx*dx + dy*dy + dz*dz
 
+  reverse: ->
+    @x *= -1
+    @y *= -1
+    @z *= -1
+
   clone: ->
     new Vector @x, @y, @z
 

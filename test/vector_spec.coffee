@@ -354,6 +354,20 @@ describe "Vector", ->
       Vector.distance(v1, v3).should.equal 10
       Vector.distance(v1, v4).should.equal 10
 
+  describe "#reverse()", ->
+    beforeEach ->
+      v1 = new Vector 10, -20, 3
+      v1.reverse()
+
+    it "reverse the vector x axis", ->
+      v1.x.should.equal -10
+
+    it "reverse the vector y axis", ->
+      v1.y.should.equal 20
+
+    it "reverse the vector z axis", ->
+      v1.z.should.equal -3
+
   describe "#clone()", ->
     beforeEach ->
       v1 = new Vector 5, 10, 15
