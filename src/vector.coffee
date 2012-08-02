@@ -70,6 +70,7 @@ class Vector
     @x *= -1
     @y *= -1
     @z *= -1
+    this
 
   clone: ->
     new Vector @x, @y, @z
