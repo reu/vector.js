@@ -44,7 +44,9 @@ class Vector
     Math.sqrt @magSq()
 
   normalize: ->
-    @div(@mag())
+    mag = @mag()
+    @div(mag) if mag > 0
+    this
 
   limit: (max) ->
     do @normalize and @mult(max) if @mag() > max

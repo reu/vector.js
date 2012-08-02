@@ -278,6 +278,19 @@ describe "Vector", ->
       it "normalizes z", ->
         v1.z.should.equal 0.8017837257372731
 
+    context "with a vector with zero magnitude", ->
+      beforeEach ->
+        v1 = new Vector 0, 0, 0
+
+      it "normalizes x", ->
+        v1.x.should.equal 0
+
+      it "normalizes y", ->
+        v1.y.should.equal 0
+
+      it "normalizes z", ->
+        v1.z.should.equal 0
+
   describe "#limit()", ->
     context "when the magnitude is inferior the informed limit", ->
       context "with a 2D vector", ->
