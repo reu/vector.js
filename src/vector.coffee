@@ -45,7 +45,7 @@ class Vector
 
   normalize: ->
     mag = @mag()
-    @div(mag) if mag > 0
+    @div(mag) if mag > 0 and mag != 1
     this
 
   limit: (max) ->
